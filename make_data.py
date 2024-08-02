@@ -4,7 +4,11 @@ warnings.filterwarnings('ignore')
 import json
 from urllib.request import urlopen
 import pandas as pd
-api_key = 'ZWNhNjFkOTg2NmY2MDkwZTMzMjkxNDY1ODg5NTg1YmM='
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv('api_key')
 area_list = ['수원시','성남시','용인시','안양시','안산시','과천시','광명시','광주시','군포시','부천시','시흥시','김포시','안성시','오산시','의왕시','이천시','평택시','하남시','화성시','여주시','양평군'
              ,'고양시','구리시','남양주시','동두천시','양주시','의정부시','파주시','포천시','연천군','가평군']
 #행정구역(읍면동)별/5세별 주민등록인구(2011년~)
